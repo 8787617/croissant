@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Croissant ASCII Art</title>
+</head>
+<body>
+
+<h1>Would you like a croissant?</h1>
+
+<script>
+function displayCroissant() {
+    const croissantAscii = `
+    ____                                    ?~~bL
+    z@~ b                                    |  \`U,
+    ]@[  |                                   ]'  z@'
+    d@~' \`|, .__     _----L___----, __, .  _t'   \`@j
+    \`@L_,   "-~ \`--"~-a,           \`C.  ~""O_    ._\`@
+    q@~'   ]P       ]@[            \`Y=,   \`H+z_  \`a@
+    \`@L  _z@        d@               Ya     \`-@b,_a'
+    \`-@d@a'       )@[               \`VL      \`a@@'
+        aa~'   ],  .a@'                qqL  ), ./~
+        @@_  _z~  _d@[                 .V@  .L_d'
+        "~@@@'  ]@@@'        __      )@n@bza@-"
+        \`-@zzz@@@L        )@@z     ]@@=%-"
+            "~~@@@@@bz_    _a@@@@z___a@K
+                "~-@@@@@@@@@@@@@@@@@@~"   
+                    \`~~~-@~~-@@~~~~~'
+    `;
+
+    // Replace newline characters with <br> for HTML display
+    const croissantHtml = croissantAscii.replace(/\n/g, '<br>');
+
+    // Display in the HTML document
+    document.write(`<pre>${croissantHtml}</pre>`);
+}
+
+// Prompt user for croissant
+const response = prompt("Would you like a croissant? (yes/no)").toLowerCase();
+
+if (response === "yes") {
+    displayCroissant();
+} else {
+    document.write("<h2>X</h2>");
+}
+</script>
+
+</body>
+</html>
